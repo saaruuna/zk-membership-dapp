@@ -34,7 +34,7 @@ const rewriteCircuit = () => {
     // Read the original Circom code
     const circomCode = fs.readFileSync('zk-circuits/circuit.circom', 'utf-8');
 
-    // Replace the placeholder with the dynamic groupSize
+    // Replace the placeholder with the dynamic circuitSize
     const modifiedCircomCode = circomCode.replace(/ZkIdentity\(3\)/g, `ZkIdentity(${circuitSize})`);
 
     // Write the modified code back to a new file
