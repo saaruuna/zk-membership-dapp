@@ -122,7 +122,7 @@ program
   .description('Generates a public-private keypair for the user.')
   .action(() => {
     privKey = genPrivateKey()
-    pubKey = genPublicKey(privaKey)
+    pubKey = genPublicKey(privKey)
 
     console.log(`Private Key: ${privKey}\n Public Key: ${pubKey}`)
   });
